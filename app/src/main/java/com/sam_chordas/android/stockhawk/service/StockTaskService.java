@@ -91,11 +91,11 @@ public class StockTaskService extends GcmTaskService{
         mStoredSymbols.replace(mStoredSymbols.length() - 1, mStoredSymbols.length(), ")");
         try {
           urlStringBuilder.append(URLEncoder.encode(mStoredSymbols.toString(), "UTF-8"));
-          result = getResult(urlStringBuilder);
         } catch (UnsupportedEncodingException e) {
           e.printStackTrace();
         }
       }
+      result = getResult(urlStringBuilder);
     } else if (params.getTag().equals("add")){
       isUpdate = false;
 
